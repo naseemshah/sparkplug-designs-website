@@ -254,6 +254,17 @@ nav .cta{
     margin-top: 50px;
 }
 
+.see-all-cta{
+    display: flex;
+    /* background-color: aquamarine; */
+    justify-content: flex-end;
+    padding-right: 20%;
+}
+
+.see-all-cta img{
+    width: 40px;
+    margin: 10px;
+}
 
 
 
@@ -287,6 +298,10 @@ nav .cta{
     .masonry-item img {
         width: 100%;
         
+    }
+    .see-all-cta{
+        justify-content: center;
+        padding-right: 0;
     }
 }
 
