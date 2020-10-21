@@ -51,6 +51,7 @@ nav{
     font-weight: 600;
     font-size: 18px;
     line-height: 30px;
+    cursor: pointer;
 }
 
 nav .cta{
@@ -118,6 +119,66 @@ nav .cta{
     width: 100%;
     height: 100%;
 }
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0066FF;
+    z-index: 100!important;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar-head img{
+    cursor: pointer;
+}
+
+.sidebar-nav-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.sidebar-nav-container ul li{
+    list-style: none;
+    text-align: right;
+    border-bottom: solid 1px white;
+    padding: 12px 0px;
+    font-family: Euclid Circular A;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.sidebar-social-icons{
+    color: white;
+}
+
+.sidebar-social-icons-list{
+    display: flex;
+    align-items: flex-end;
+}
+
+.sidebar-social-icons-list svg{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 900px){
     .hero-text h1{
