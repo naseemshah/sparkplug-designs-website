@@ -205,6 +205,59 @@ nav .cta{
 }
 
 
+
+/* ////////////\\\\\\\\\\\\\\\\ */
+/*      Masonery grid            */
+.works-title{
+    /* background-color: #0066FF; */
+    text-align: right;
+    padding: 10px;
+    margin-right: 50px;
+}
+.masonry-wrapper {
+    padding: 1.5em;
+    width: 100%;
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    /* background-color: #0066FF; */
+    box-sizing: border-box;
+  }
+  .masonry {
+    columns: 2;
+    column-gap: 200px;
+    /* background-color: bisque; */
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: -10%;
+    /* transform: translate(-50%); */
+  }
+  .masonry-item {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    /* background-color: rgb(207, 131, 37); */
+  }
+  .masonry-item img {
+        width: 150%;
+        cursor: pointer;
+    }
+  .masonry-item:nth-child(odd){
+      /* background-color: blue; */
+      margin-top: 50px;
+      margin-bottom: 150px;
+    }
+  .masonry-item:nth-child(even){
+    /* background-color: red; */
+    margin-top: 250px;
+    margin-top: 50px;
+}
+
+
+
+
+
 @media screen and (max-width: 900px){
     .hero-text h1{
         font-size: 28px;
@@ -220,6 +273,20 @@ nav .cta{
         font-size: 24px;
         line-height: 31px;
     
+    }
+    .masonry {
+        columns: 1;
+        column-gap: 150px;
+        margin-left: 0%;
+
+    }
+    .masonry-item{
+        width: 100%;
+        margin: 20px 0 0 0!important;
+    }
+    .masonry-item img {
+        width: 100%;
+        
     }
 }
 
@@ -311,3 +378,4 @@ nav .cta{
         
 
 }
+

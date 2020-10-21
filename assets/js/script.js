@@ -10,7 +10,7 @@ let sidbarAnimation = anime({
     duration: 500   
   });
 
-  
+
 window.addEventListener("resize",()=>{
     let sidebar = document.getElementById("sidebar")
     sidebar.style.left = `${window.innerWidth}px`;
@@ -35,3 +35,41 @@ hamMenuCloseBtn.onclick = ()=>{
     sidbarAnimation.play();
     isInitialSidebarVisit = false;
 }
+
+
+// Masonery
+
+function generateMasaneryGrid() {
+    let workItems = [
+        {
+            workName: 'Work Name',
+            image: '/assets/img/works/work1.png'
+        },
+        {
+            workName: 'Work Name',
+            image: '/assets/img/works/work2.png'
+        },
+        {
+            workName: 'Work Name',
+            image: '/assets/img/works/work3.png'
+        },
+        {
+            workName: 'Work Name',
+            image: '/assets/img/works/work4.png'
+        },
+
+    ];
+
+    let worksContainer = document.getElementById('masonry');
+
+
+    workItems.forEach(WorkItem =>{
+        worksContainer.innerHTML += `
+        <div class="masonry-item">
+                <img src="${WorkItem.image}" alt="${WorkItem.title}" class="masonry-content">
+         </div>`;
+    })
+
+}
+
+generateMasaneryGrid();
