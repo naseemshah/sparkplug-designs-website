@@ -43,19 +43,19 @@ function generateMasaneryGrid() {
     let workItems = [
         {
             workName: 'Work Name',
-            image: '/assets/img/works/work1.png'
+            image: 'assets/img/works/work1.png'
         },
         {
             workName: 'Work Name',
-            image: '/assets/img/works/work2.png'
+            image: 'assets/img/works/work2.png'
         },
         {
             workName: 'Work Name',
-            image: '/assets/img/works/work3.png'
+            image: 'assets/img/works/work3.png'
         },
         {
             workName: 'Work Name',
-            image: '/assets/img/works/work4.png'
+            image: 'assets/img/works/work4.png'
         },
 
     ];
