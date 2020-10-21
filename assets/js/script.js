@@ -10,6 +10,11 @@ let sidbarAnimation = anime({
     duration: 500   
   });
 
+  
+window.addEventListener("resize",()=>{
+    let sidebar = document.getElementById("sidebar")
+    sidebar.style.left = `${window.innerWidth}px`;
+},false)
 
   
   
