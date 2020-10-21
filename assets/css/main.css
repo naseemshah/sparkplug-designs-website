@@ -1,0 +1,50 @@
+@import url("assets/fonts/fonts.css");
+
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: 'Euclid Circular A', Arial, Helvetica, sans-serif;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    width: 112px;
+}
+
+.nav-logo img{
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+
+.nav-menu{
+    margin-left: auto;
+}
+
+.nav-menu ul{
+    display: flex;
+    list-style-type: none;
+}
+.nav-menu ul li{
+    margin: 10px 30px;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+nav .cta{
+    background: #0066FF!important;
+    border-radius: 31px;
+    padding: 12px 50px;
+    color: white;
+    font-size: 20px;
+}
