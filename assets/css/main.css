@@ -3,6 +3,7 @@ html,body{
     margin: 0;
     padding: 0;
     background-color: #ffffff;
+    box-sizing: border-box;
     font-family: 'Euclid Circular A', Arial, Helvetica, sans-serif;
 }
 
@@ -71,7 +72,7 @@ nav .cta{
 }
 
 .hero-text{
-    max-width: 800px;
+    max-width: 600px;
     margin-left: -200px;
     z-index: 2;
 }
@@ -81,7 +82,7 @@ nav .cta{
     font-family: Euclid Circular A;
     font-style: normal;
     font-weight: 600;
-    font-size: 46px;
+    font-size: 35px;
 }
 
 .hero-image{
@@ -90,8 +91,9 @@ nav .cta{
 }
 
 .hero-image img{
-    width: 100%;
-    animation: logo-spin 30s infinite linear;
+    max-width: 100%;
+    max-height: 100%;
+    animation: logo-spin 25s infinite linear;
 
 }
 
@@ -117,8 +119,18 @@ nav .cta{
     height: 100%;
 }
 
+@media screen and (max-width: 900px){
+    .hero-text h1{
+        font-size: 28px;
+    }
+    .hero-text{
+        max-width: 400px;
+    }
+}
+
 
 @media screen and (max-width: 769px) {
+    
     nav{
         padding: 20px 50px;
     }
@@ -131,11 +143,62 @@ nav .cta{
     
 }
 
+@media screen and (max-width: 640px) {
+    .hero-section{
+        flex-direction: column;
+    }
+    .hero-text{
+        margin-left: 0;
+        padding: 20px;
+        max-width: 80%;
+        margin-bottom: 30px;
+    }
+    .hero-image{
+        width: 350px;
+    }
+
+    .hero-image img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    
+}
+
+@media screen and (max-width: 550px) {
+    .hero-text{
+        padding: 30px;
+
+    }
+    .hero-text h1{
+        font-size: 25px;
+    }
+    
+}
+
 @media screen and (max-width: 481px) {
+    .hero-image{
+        width: 280px;
+    }
+
+    .hero-text h1{
+        font-size: 20px;
+    }
+
+    .hero-text{
+        margin: 20px;
+        max-width: 90%;
+        padding: 30px;
+        margin: 0;
+    }
         
 }
 
 @media screen and (max-width: 320px) {
+    .hero-text h1{
+        font-size: 18px;
+    }
+
         
 
 }
