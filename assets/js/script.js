@@ -15,12 +15,18 @@ let sidbarAnimation = anime({
   
 let hamMenuBtn = document.getElementById("ham-menu");
 let hamMenuCloseBtn = document.getElementById("ham-close");
+let isInitialSidebarVisit = true;
 hamMenuBtn.onclick = ()=>{
-    sidbarAnimation.reverse();
-    sidbarAnimation.play();
+    if (isInitialSidebarVisit){
+        sidbarAnimation.play();
+    }else{
+        sidbarAnimation.reverse();
+        sidbarAnimation.play();
+    }
 
 }
 hamMenuCloseBtn.onclick = ()=>{
     sidbarAnimation.reverse();
     sidbarAnimation.play();
+    isInitialSidebarVisit = false;
 }
