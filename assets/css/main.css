@@ -124,7 +124,7 @@ nav .cta{
 .sidebar{
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100%;
     width: 100vw;
     height: 100vh;
     background-color: #0066FF;
