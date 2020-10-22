@@ -266,6 +266,47 @@ nav .cta{
     margin: 10px;
 }
 
+/* /////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* Carousal*/
+.home-carousal-wrapper{
+    margin: 0;
+    outline: none;
+    /* max-height: 500px; */
+    display: none;
+
+
+}
+.home-carousal-container {
+    /* background: rgb(140, 0, 0); */
+    margin: 70px 0px;
+    /* max-height: 500px; */
+    outline: none;
+
+  }
+  
+.home-carousal-cell {
+    margin-right: 20px;
+    overflow: hidden;
+    /* max-width: 80vw; */
+    /* max-height: 500px; */
+    /* background-color: #0066FF; */
+    outline: none;
+
+  }
+  
+.home-carousal-cell img {
+    display: block;
+    /* max-width: 100%;
+    max-height: 100%; */
+    outline: none;
+    height: 400px;
+}
+
+/* @media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+    height: 400px;
+  }
+} */
 
 
 
@@ -303,6 +344,12 @@ nav .cta{
         justify-content: center;
         padding-right: 0;
     }
+    .masonry-wrapper{
+        display: none;
+    }
+    .home-carousal-wrapper{
+        display: unset;
+    }
 }
 
 
@@ -322,7 +369,6 @@ nav .cta{
     .ham-menu{
         display: unset;
     }
-    
 }
 
 @media screen and (max-width: 640px) {

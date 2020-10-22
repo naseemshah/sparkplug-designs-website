@@ -36,33 +36,32 @@ hamMenuCloseBtn.onclick = ()=>{
     isInitialSidebarVisit = false;
 }
 
-
+// WORK SECTION
 // Masonery
 
-function generateMasaneryGrid() {
-    let workItems = [
-        {
-            workName: 'Work Name',
-            image: 'assets/img/works/work1.png'
-        },
-        {
-            workName: 'Work Name',
-            image: 'assets/img/works/work2.png'
-        },
-        {
-            workName: 'Work Name',
-            image: 'assets/img/works/work3.png'
-        },
-        {
-            workName: 'Work Name',
-            image: 'assets/img/works/work4.png'
-        },
+let workItems = [
+    {
+        workName: 'Work Name',
+        image: 'assets/img/works/work1.png'
+    },
+    {
+        workName: 'Work Name',
+        image: 'assets/img/works/work2.png'
+    },
+    {
+        workName: 'Work Name',
+        image: 'assets/img/works/work3.png'
+    },
+    {
+        workName: 'Work Name',
+        image: 'assets/img/works/work4.png'
+    },
 
-    ];
+];
+
+function generateMasaneryGrid() {
 
     let worksContainer = document.getElementById('masonry');
-
-
     workItems.forEach(WorkItem =>{
         worksContainer.innerHTML += `
         <div class="masonry-item">
@@ -73,3 +72,39 @@ function generateMasaneryGrid() {
 }
 
 generateMasaneryGrid();
+
+
+//CAROUSAL
+
+function generateHomeCarousal() {
+    let carousel = document.querySelector('.home-carousal-container');
+
+    workItems.forEach(WorkItem =>{
+        carousel.innerHTML += `
+        <div class="home-carousal-cell">
+                <img src="${WorkItem.image}" alt="${WorkItem.title}">
+         </div>`;
+    })
+
+    let flkty = new Flickity( carousel, {
+    imagesLoaded: true,
+    percentPosition: false,
+    });
+
+    let imgs = carousel.querySelectorAll('.home-carousal-cell img');
+    // get transform property
+    let docStyle = document.documentElement.style;
+    let transformProp = typeof docStyle.transform == 'string' ?
+    'transform' : 'WebkitTransform';
+
+    flkty.on( 'scroll', function() {
+    flkty.slides.forEach( function( slide, i ) {
+        let img = imgs[i];
+        let x = ( slide.target + flkty.x ) * -1/5;
+        img.style[ transformProp ] = 'translateX(' + x  + 'px)';
+    });
+    });
+    
+}
+
+generateHomeCarousal();
