@@ -108,3 +108,52 @@ function generateHomeCarousal() {
 }
 
 generateHomeCarousal();
+
+
+// ////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// WHAT WE DO SECTION
+function setAccordian(){
+    var acc = document.getElementsByClassName("home-accordian");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    
+    let currentElement = acc[i];
+    currentElement.addEventListener("click", function() {
+        if(window.innerWidth<769){
+            this.classList.toggle("home-accordian-active");
+            var panel = this.childNodes[3];
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        } 
+        });
+    
+    currentElement.addEventListener('mouseover',()=>{
+        if(window.innerWidth>=769){
+            let panel = currentElement.children[2];
+            panel.classList.add("home-accordian-hover-active")
+            // console.log(panel)
+            panel.style.width = '300px';
+            // panel.style.top = '0';
+        }
+        
+        },false)
+
+    currentElement.addEventListener('mouseout',()=>{
+        if(window.innerWidth>=769){
+            let panel = currentElement.children[2];
+            panel.classList.remove("home-accordian-hover-active")
+            // console.log(panel)
+            // panel.style.left = '0';
+            // panel.style.top = '0';
+        }
+        },false)
+    }
+    
+
+}
+
+setAccordian()
