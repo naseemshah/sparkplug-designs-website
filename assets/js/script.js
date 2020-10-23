@@ -151,3 +151,65 @@ function setAccordian(){
 }
 
 setAccordian()
+
+
+
+// Clients section\\\\\\\\\\\\\\
+
+function generateClients() {
+    let clientsContainer = document.getElementById('photobanner');
+    let images = [
+        {
+            title: "alpas",
+            src: 'assets/img/clients/alpas.png'
+        },
+        {
+            title: "datamatics",
+            src: 'assets/img/clients/datamatics-logo.png'
+        },
+        {
+            title: "alpas",
+            src: 'assets/img/clients/alpas.png'
+        },
+        {
+            title: "datamatics",
+            src: 'assets/img/clients/datamatics-logo.png'
+        },
+        {
+            title: "alpas",
+            src: 'assets/img/clients/alpas.png'
+        },
+        {
+            title: "datamatics",
+            src: 'assets/img/clients/datamatics-logo.png'
+        },
+        {
+            title: "alpas",
+            src: 'assets/img/clients/alpas.png'
+        },
+        {
+            title: "datamatics",
+            src: 'assets/img/clients/datamatics-logo.png'
+        }        
+    ]
+
+    images.forEach((image,id) =>{
+        if(id==0){
+            clientsContainer.innerHTML += `
+                
+                <img class="first" src="${image.src}" alt="${image.title}" >
+                
+            `
+
+        }else{
+            clientsContainer.innerHTML += `
+                
+                <img src="${image.src}" alt="${image.title}" >
+                
+            `
+        }
+    })
+    
+}
+
+generateClients()

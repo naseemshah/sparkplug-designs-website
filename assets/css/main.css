@@ -405,8 +405,98 @@ nav .cta{
   }
 
 
+/* ////////////////////////////////////////// */
+/* Clients Section */
+
+.home-clients-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 10px auto;
+    background: white;
+}
+
+.photobanner {
+    height: 233px;
+    width: 3550px;
+    margin-bottom: 5px;
+    font-size: 0;
+}
+
+.photobanner img {
+	margin: 20px;
+	height: 80px;
+	width: auto;
+}
+
+.photobanner img  {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+ 
 
 
+
+/*keyframe animations*/
+.first {
+    -webkit-animation: bannermove 30s linear infinite;
+       -moz-animation: bannermove 30s linear infinite;
+        -ms-animation: bannermove 30s linear infinite;
+         -o-animation: bannermove 30s linear infinite;
+            animation: bannermove 30s linear infinite;
+}
+ 
+@keyframes bannermove {
+ 0% {margin-left: 0px;}
+ 100% {margin-left: -2130px;}
+}
+ 
+@-moz-keyframes bannermove {
+ 0% {margin-left: 0px;}
+ 100% {margin-left: -2130px;}
+}
+ 
+@-webkit-keyframes bannermove {
+ 0% {margin-left: 0px;}
+ 100% {margin-left: -2130px;}
+}
+ 
+@-ms-keyframes bannermove {
+ 0% {margin-left: 0px;}
+ 100% {margin-left: -2130px;}
+}
+ 
+@-o-keyframes bannermove {
+ 0% {margin-left: 0px;}
+ 100% {margin-left: -2130px;}
+}
+
+@keyframes bannermoves {
+ 0% {margin-left: -2130px;}
+ 100% {margin-left: 0px;}
+}
+ 
+@-moz-keyframes bannermoves {
+ 0% {margin-left: -2130px;}
+ 100% {margin-left: 0px;}
+}
+ 
+@-webkit-keyframes bannermoves {
+ 0% {margin-left: -2130px;}
+ 100% {margin-left: 0px;}
+}
+ 
+@-ms-keyframes bannermoves {
+ 0% {margin-left: -2130px;}
+ 100% {margin-left: 0px;}
+}
+ 
+@-o-keyframes bannermoves {
+ 0% {margin-left: -2130px;}
+ 100% {margin-left: 0px;}
+}
 
 
 
