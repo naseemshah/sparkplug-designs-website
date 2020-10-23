@@ -115,6 +115,7 @@ generateHomeCarousal();
 function setAccordian(){
     var acc = document.getElementsByClassName("home-accordian");
     var i;
+    let hoverContainer = document.getElementById('what-we-do-hover-container');
 
     for (i = 0; i < acc.length; i++) {
     
@@ -133,22 +134,15 @@ function setAccordian(){
     
     currentElement.addEventListener('mouseover',()=>{
         if(window.innerWidth>=769){
-            let panel = currentElement.children[2];
-            panel.classList.add("home-accordian-hover-active")
-            // console.log(panel)
-            panel.style.width = '300px';
-            // panel.style.top = '0';
+            let panel = currentElement.children[1];
+            hoverContainer.innerHTML= panel.innerHTML
         }
         
         },false)
 
     currentElement.addEventListener('mouseout',()=>{
         if(window.innerWidth>=769){
-            let panel = currentElement.children[2];
-            panel.classList.remove("home-accordian-hover-active")
-            // console.log(panel)
-            // panel.style.left = '0';
-            // panel.style.top = '0';
+            hoverContainer.innerHTML = '';
         }
         },false)
     }
