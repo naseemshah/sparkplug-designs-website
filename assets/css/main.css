@@ -122,7 +122,7 @@ nav .cta{
     font-weight: 300;
     font-size: 52px;
     text-align: center;
-    line-height: 65px;
+    line-height: 70px;
     padding: 20px;
     /* background-color: rgb(37, 37, 22); */
 
@@ -218,7 +218,11 @@ nav .cta{
     /* background-color: #0066FF; */
     text-align: right;
     padding: 10px;
-    margin-right: 50px;
+    margin-right: 120px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 58px;
 }
 .masonry-wrapper {
     padding: 1.5em;
@@ -237,6 +241,7 @@ nav .cta{
     box-sizing: border-box;
     margin-left: -10%;
     /* transform: translate(-50%); */
+    margin-bottom: -500px;
   }
   .masonry-item {
     box-sizing: border-box;
@@ -260,7 +265,7 @@ nav .cta{
     margin-top: 250px;
     margin-top: 50px;
     width: 340px;
-    border: solid 5px rgb(51, 255, 0);
+    /* border: solid 5px rgb(51, 255, 0); */
     position: relative;
     top: 200px;
 }
@@ -273,12 +278,12 @@ nav .cta{
     margin-bottom: 150px;
     width: 461px;
     height: 474px;
-    border: solid 5px blue;
+    /* border: solid 5px blue; */
     top: 200px;
 
 }
 .masonry-item:nth-child(4){
-    border: solid 5px blue;
+    /* border: solid 5px blue; */
         /* background-color: blue; */
         position: relative;
         top: 30px;
@@ -295,11 +300,20 @@ nav .cta{
     /* background-color: aquamarine; */
     justify-content: flex-end;
     padding-right: 20%;
+    /* background-color: #0066FF; */
+}
+
+.see-all-cta h3{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 46px;
+    line-height: 58px;
 }
 
 .see-all-cta img{
-    width: 40px;
+    width: 64px;
     margin: 10px;
+    margin-left: 30px;
 }
 
 /* /////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ */
