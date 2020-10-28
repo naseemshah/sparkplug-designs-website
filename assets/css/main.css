@@ -76,10 +76,12 @@ nav .cta{
     height: 100vh;
     box-sizing: border-box;
     padding-top: 60px;
+    overflow: hidden;
+
 }
 
 .hero-text{
-    max-width: 600px;
+    max-width: 800px;
     margin-left: -200px;
     z-index: 2;
 
@@ -90,7 +92,7 @@ nav .cta{
     font-family: Euclid Circular A;
     font-style: normal;
     font-weight: 600;
-    font-size: 35px;
+    font-size: 6vh;
 }
 
 .hero-image{
@@ -244,24 +246,49 @@ nav .cta{
     /* background-color: rgb(207, 131, 37); */
   }
   .masonry-item img {
-        width: 150%;
+        width: 100%;
         cursor: pointer;
     }
-  .masonry-item:nth-child(odd){
+  .masonry-item:nth-child(1){
       /* background-color: blue; */
       margin-top: 50px;
       margin-bottom: 150px;
+      width: 500px;
     }
-  .masonry-item:nth-child(even){
+  .masonry-item:nth-child(2){
     /* background-color: red; */
     margin-top: 250px;
     margin-top: 50px;
-    }
-    .masonry-item:nth-child(3){
+    width: 340px;
+    border: solid 5px blue;
+    position: relative;
+    top: 350px;
+}
+.masonry-item:nth-child(3){
+    /* background-color: blue; */
+    position: relative;
+    left: 100px;
+    width: 461px;
+    margin-top: 200px;
+    margin-bottom: 150px;
+    width: 461px;
+    height: 474px;
+    border: solid 5px blue;
+    top: 200px;
+
+}
+.masonry-item:nth-child(4){
+    border: solid 5px blue;
         /* background-color: blue; */
+        position: relative;
+        top: 30px;
+        left: -100px;
         margin-top: 200px;
         margin-bottom: 150px;
+        width: 643px;
+        height: 614px;  
       }
+/* slider overrides */
 
 .see-all-cta{
     display: flex;
@@ -586,8 +613,8 @@ footer{
 .footer-reach-us a p{
     font-style: normal;
     font-weight: 600;
-    font-size: 26px;
-    line-height: 33px;
+    font-size: 2vw;
+    line-height:  2vw;
 }
 
 .footer-top-inner-right{
@@ -734,6 +761,38 @@ footer form div:nth-child(6){
     margin-bottom: 80px;
 }
 
+
+@media screen and (min-width: 1920px){
+   .container{
+       max-width: 1920px;
+   }
+   .hero-section{
+       padding-left: auto;
+       padding-right: auto;
+   }
+   .hero-section h1{
+       font-size: 46px;
+   }
+   footer{
+    background-color: aqua;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+
+   .footer-reach-us a p{
+       font-size: 26px;
+   }
+   nav{
+    background-color: aqua;
+    max-width: 1920px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+   }
+}
+
+
 @media screen and (max-width: 1300px){
     footer form div {
         display: grid;
@@ -802,7 +861,12 @@ footer form div:nth-child(6){
         flex-direction: column;
     }
 
-
+    .footer-reach-us a p{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 4vw;
+        line-height:  4vw;
+    }
     /*  */
 }
 
@@ -848,6 +912,9 @@ footer form div:nth-child(6){
 @media screen and (max-width: 640px) {
     .hero-section{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
     .hero-text{
         margin-left: 0;
@@ -885,6 +952,12 @@ footer form div:nth-child(6){
     
     }
      */
+     .footer-reach-us a p{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 4vw;
+        line-height:  4vw;
+    }
 }
 
 @media screen and (max-width: 481px) {
@@ -906,7 +979,12 @@ footer form div:nth-child(6){
     footer form input{
         width: 100%;
     }
-            
+    .footer-reach-us a p{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 6vw;
+        line-height:  6vw;
+    }
 }
 
 

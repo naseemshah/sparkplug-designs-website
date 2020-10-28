@@ -52,6 +52,10 @@ function generateHomeCarousal() {
     let flkty = new Flickity( carousel, {
     imagesLoaded: true,
     percentPosition: false,
+    pageDots: false,
+    wrapAround: true,
+    autoPlay: 2500,
+    adaptiveHeight: true
     });
 
     let imgs = carousel.querySelectorAll('.home-carousal-cell img');
@@ -64,9 +68,18 @@ function generateHomeCarousal() {
     flkty.slides.forEach( function( slide, i ) {
         let img = imgs[i];
         let x = ( slide.target + flkty.x ) * -1/5;
-        img.style[ transformProp ] = 'translateX(' + x  + 'px)';
+        img.style[ transformProp ] = `translateX(${x}px)`;
+
     });
     });
+    flkty.on( 'select', function( index ) {
+        console.log('Flickity select ' + index );
+        console.log(imgs[index].style[transformProp]);
+        // flkty.reposition()
+        // console.log(imgs[index].parentNode.style="height: 500px");
+        
+      });
+      
     
 }
 
