@@ -260,9 +260,9 @@ nav .cta{
     margin-top: 250px;
     margin-top: 50px;
     width: 340px;
-    border: solid 5px blue;
+    border: solid 5px rgb(51, 255, 0);
     position: relative;
-    top: 350px;
+    top: 200px;
 }
 .masonry-item:nth-child(3){
     /* background-color: blue; */
