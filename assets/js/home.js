@@ -97,13 +97,21 @@ function setAccordian(){
     
     let currentElement = acc[i];
     currentElement.addEventListener("click", function() {
+        // let openedAccordians = document.getElementsByClassName('home-accordian-active');
+        // console.log(openedAccordians);
+        // openedAccordians.forEach(accordian =>{
+        //     // if(accordian)
+        //     // console.log(accordian)
+        //     // accordian.classList.toggle("home-accordian-active");
+        // })
         if(window.innerWidth<769){
-            this.classList.toggle("home-accordian-active");
             var panel = this.childNodes[3];
             if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
             } else {
             panel.style.maxHeight = panel.scrollHeight + "px";
+            // console.log(this.classList.add('home-accordian-active'));
+            
             }
         } 
         });
