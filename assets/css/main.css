@@ -469,6 +469,7 @@ nav .cta{
 .clients-section{
     /* background-color: aquamarine; */
     margin: 0;
+    margin-top: 100px;
 }
 
 .home-clients-container {
@@ -566,12 +567,12 @@ nav .cta{
 .lets-work-together-section{
     /* background-color: tomato; */
     width: 100%;
-    margin: 0;
+    margin: 0 0 70px 0;
     overflow: hidden;
 }
 .lets-work-together-section h1{
     width: 100%;
-    font-size: 118px;
+    font-size: 10vw;
     font-style: normal;
     font-weight: 300;
     line-height: 150px;
@@ -599,6 +600,11 @@ footer{
 .footer-icons{
     color: rgb(0, 0, 0);
 }
+
+.footer-social-icons{
+    margin-bottom: 50px;
+}
+
 
 .footer-social-icons-list{
     display: flex;
@@ -731,7 +737,7 @@ footer form div:nth-child(6){
     border-radius: 13px;
     min-height: 152px;
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 20px;
     padding: 20px;
 }
 .form-submit-section{
@@ -742,7 +748,9 @@ footer form div:nth-child(6){
     font-weight: 300;
     font-size: 12px;
     line-height: 15px;
+    
 }
+
 .form-submit-button{
     display: flex;
     background: #0066FF;
@@ -754,6 +762,7 @@ footer form div:nth-child(6){
     justify-content: space-evenly;
     text-align: center;
     margin-left: 30px;
+    cursor: pointer;
 }
 
 /* .form-submit-button svg{
@@ -786,11 +795,76 @@ footer form div:nth-child(6){
     font-size: 12px;
     line-height: 15px;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 100px;
+    justify-content: center;
     box-sizing: border-box;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    text-align: center;
 }
+
+#facebook-icon{
+    transition: all 0.3s ease-in-out;
+}
+
+
+#facebook-icon:hover, #facebook-icon:hover path{
+    fill: #3b5998;
+    transition: all 0.3s ease-in-out;
+}
+
+#facebook-icon:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;    
+}
+
+
+#linkedin-icon{
+    transition: all 0.3s ease-in-out;
+}
+
+
+#linkedin-icon:hover, #linkedin-icon:hover path{
+    fill: #0e76a8;
+    transition: all 0.3s ease-in-out;
+}
+
+#linkedin-icon:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;    
+}
+
+#twitter-icon{
+    transition: all 0.3s ease-in-out;
+}
+
+
+#twitter-icon:hover, #twitter-icon:hover path{
+    fill: #00acee;
+    transition: all 0.3s ease-in-out;
+}
+
+#twitter-icon:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;    
+}
+
+#behance-icon{
+    transition: all 0.3s ease-in-out;
+}
+
+#behance-icon:hover, #behance-icon:hover path{
+    fill: #053eff;
+    transition: all 0.3s ease-in-out;
+}
+
+#behance-icon:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;    
+}
+
+
+
+
 
 
 @media screen and (min-width: 1920px){
@@ -947,6 +1021,8 @@ footer form div:nth-child(6){
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-left: 0;
+        padding-left: 0;
 
     }
     .hero-text{
@@ -1026,6 +1102,14 @@ footer form div:nth-child(6){
         font-weight: 600;
         font-size: 6vw;
         line-height:  6vw;
+    }
+    .form-submit-section{
+        flex-direction: column!important;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-submit-button{
+        margin: 20px 0 0 0;
     }
 }
 
