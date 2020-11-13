@@ -18,7 +18,7 @@ let workItems = [
     {
         workName: 'Work Name',
         image: 'assets/img/works/work4.png'
-    },
+    }
 
 ];
 
