@@ -1,3 +1,17 @@
+window.onload = () =>{
+    
+    generateMasaneryGrid();
+    generateHomeCarousal();
+    setAccordian();
+    generateClients();
+    (function () {
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            // multiplier: 0.5
+        });
+    })();
+}
 
 // WORK SECTION
 // Masonery
@@ -24,17 +38,17 @@ let workItems = [
 
 function generateMasaneryGrid() {
 
-    let worksContainer = document.getElementById('masonry');
-    workItems.forEach(WorkItem =>{
-        worksContainer.innerHTML += `
-        <div class="masonry-item">
-                <img src="${WorkItem.image}" alt="${WorkItem.title}" class="masonry-content">
-         </div>`;
-    })
+    // let worksContainer = document.getElementById('masonry');
+    // workItems.forEach(WorkItem =>{
+    //     worksContainer.innerHTML += `
+    //     <div data-scroll data-scroll-speed="2" class="masonry-item">
+    //             <img src="${WorkItem.image}" alt="${WorkItem.title}" class="masonry-content">
+    //      </div>`;
+    // })
+
 
 }
 
-generateMasaneryGrid();
 
 
 //CAROUSAL
@@ -83,7 +97,7 @@ flkty.on( 'select', function( index ) {
     
 }
 
-generateHomeCarousal();
+
 
 
 // ////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -136,7 +150,7 @@ function setAccordian(){
 
 }
 
-setAccordian()
+
 
 
 
@@ -198,4 +212,3 @@ function generateClients() {
     
 }
 
-generateClients()

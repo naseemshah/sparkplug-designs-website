@@ -934,7 +934,7 @@ footer form div:nth-child(6){
        font-size: 46px;
    }
    footer{
-    background-color: aqua;
+    /* background-color: aqua; */
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
@@ -944,7 +944,7 @@ footer form div:nth-child(6){
        font-size: 26px;
    }
    nav{
-    background-color: aqua;
+    /* background-color: aqua; */
     max-width: 1920px;
     margin-left: 50%;
     transform: translateX(-50%);
