@@ -358,7 +358,7 @@ nav .cta:hover{
     /* max-height: 500px; */
     /* background-color: #0066FF; */
     outline: none;
-    height: 400px!important;
+    height: 350px;
     top: 50%;
     transform: translateY(-50%);
     transition: height 0.5s ease-in-out;
@@ -371,10 +371,10 @@ nav .cta:hover{
     outline: none;
     height: 400px;
 }
-/* .is-selected{
-    height: 400px!important;
+.is-selected{
+    height: 400px;
     transition: height 0.5s ease-in-out;
-} */
+}
 
 /* ////////////////////////\\\\\\\\\\\\\\\\\\\\ */
 /* Accordian */
