@@ -69,12 +69,12 @@ function generateHomeCarousal() {
         let img = imgs[i];
         let x = ( slide.target + flkty.x ) * -1/5;
         img.style[ transformProp ] = `translateX(${x}px)`;
-
+        
     });
-    });
-    flkty.on( 'select', function( index ) {
-        console.log('Flickity select ' + index );
-        console.log(imgs[index].style[transformProp]);
+});
+flkty.on( 'select', function( index ) {
+    console.log('Flickity select ' + index );
+    console.log(imgs[index].style[transformProp]);
         // flkty.reposition()
         // console.log(imgs[index].parentNode.style="height: 500px");
         
@@ -97,19 +97,21 @@ function setAccordian(){
     
     let currentElement = acc[i];
     currentElement.addEventListener("click", function() {
-        // let openedAccordians = document.getElementsByClassName('home-accordian-active');
+        let openedAccordians = Array.from(document.getElementsByClassName('home-accordian-active'));
         // console.log(openedAccordians);
-        // openedAccordians.forEach(accordian =>{
-        //     // if(accordian)
-        //     // console.log(accordian)
-        //     // accordian.classList.toggle("home-accordian-active");
-        // })
+        openedAccordians.length && openedAccordians.forEach(accordian =>{
+            // if(accordian)
+            // console.log(accordian)
+            accordian.classList.toggle("home-accordian-active");
+        })
         if(window.innerWidth<769){
             var panel = this.childNodes[3];
             if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
+            panel.classList.toggle("home-accordian-active")
+            // panel.style.maxHeight = null;
             } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.classList.toggle("home-accordian-active")
+            // panel.style.maxHeight = panel.scrollHeight + "px";
             // console.log(this.classList.add('home-accordian-active'));
             
             }
