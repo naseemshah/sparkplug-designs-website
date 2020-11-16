@@ -11,6 +11,9 @@ window.onload = () =>{
             // multiplier: 0.5
         });
     })();
+    animateHeroImage();
+    animateHeroText();
+    
 }
 
 // WORK SECTION
@@ -210,5 +213,32 @@ function generateClients() {
         }
     })
     
+}
+
+// Text Animations
+// HERO SECTION
+function animateHeroText(){
+    var textWrapper = document.querySelector('.hero-text-h1');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='hero-text-letter-animated'>$&</span>");
+    anime.timeline({loop: false})
+    .add({
+        targets: '.hero-text-h1 .hero-text-letter-animated',
+        translateY: [100,0],
+        // opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1400,
+        delay: (el, i) => 30 * i
+    })
+}
+
+function animateHeroImage(){
+    anime.timeline({loop: false})
+    .add({
+        targets: '.hero-image',
+        translateY: [100,0],
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1400,
+    })
 }
 

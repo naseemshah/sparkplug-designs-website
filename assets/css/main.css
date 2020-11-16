@@ -110,8 +110,13 @@ nav .cta:hover{
     font-style: normal;
     font-weight: 600;
     font-size: 6vh;
+    overflow: hidden;
 }
 
+.hero-text-letter-animated{
+    display: inline-block;
+    line-height: 1em;
+  }
 .hero-image{
     width: 500px;
     /* background-color: aqua; */
