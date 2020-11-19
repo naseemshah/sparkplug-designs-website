@@ -1,11 +1,13 @@
-window.onload = () =>{
+let LocoScroll;
+window.onload = (e) =>{
+    // console.log(e);
     
     generateMasaneryGrid();
     generateHomeCarousal();
     setAccordian();
     generateClients();
     (function () {
-        const scroll = new LocomotiveScroll({
+        LocoScroll = new LocomotiveScroll({
             el: document.querySelector('[data-scroll-container]'),
             smooth: true,
             // multiplier: 0.5
@@ -90,8 +92,8 @@ function generateHomeCarousal() {
     });
 });
 flkty.on( 'select', function( index ) {
-    console.log('Flickity select ' + index );
-    console.log(imgs[index].style[transformProp]);
+    // console.log('Flickity select ' + index );
+    // console.log(imgs[index].style[transformProp]);
         // flkty.reposition()
         // console.log(imgs[index].parentNode.style="height: 500px");
         
@@ -164,36 +166,46 @@ function generateClients() {
     let images = [
         {
             title: "alpas",
-            src: 'assets/img/clients/alpas.png'
+            src: 'assets/img/clients/alpas.svg'
         },
         {
-            title: "datamatics",
-            src: 'assets/img/clients/datamatics-logo.png'
+            title: "AOL",
+            src: 'assets/img/clients/aol.svg'
         },
         {
-            title: "alpas",
-            src: 'assets/img/clients/alpas.png'
+            title: "datamatics-logo",
+            src: 'assets/img/clients/datamatics-logo.svg'
         },
         {
-            title: "datamatics",
-            src: 'assets/img/clients/datamatics-logo.png'
-        },
-        {
-            title: "alpas",
-            src: 'assets/img/clients/alpas.png'
-        },
-        {
-            title: "datamatics",
-            src: 'assets/img/clients/datamatics-logo.png'
+            title: "dr-reddy-s-seeklogo.com",
+            src: 'assets/img/clients/dr-reddy-s-seeklogo.com.svg'
         },
         {
             title: "alpas",
-            src: 'assets/img/clients/alpas.png'
+            src: 'assets/img/clients/alpas.svg'
         },
         {
-            title: "datamatics",
-            src: 'assets/img/clients/datamatics-logo.png'
-        }        
+            title: "AOL",
+            src: 'assets/img/clients/aol.svg'
+        },
+        {
+            title: "datamatics-logo",
+            src: 'assets/img/clients/datamatics-logo.svg'
+        },
+        {
+            title: "dr-reddy-s-seeklogo.com",
+            src: 'assets/img/clients/dr-reddy-s-seeklogo.com.svg'
+        },
+        {
+            title: "alpas",
+            src: 'assets/img/clients/alpas.svg'
+        },
+        {
+            title: "AOL",
+            src: 'assets/img/clients/aol.svg'
+        }
+               
+             
     ]
 
     images.forEach((image,id) =>{
@@ -219,15 +231,15 @@ function generateClients() {
 // HERO SECTION
 function animateHeroText(){
     var textWrapper = document.querySelector('.hero-text-h1');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='hero-text-letter-animated'>$&</span>");
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S+\s*/g, "<span class='hero-text-letter-animated'>$&</span>");
     anime.timeline({loop: false})
     .add({
         targets: '.hero-text-h1 .hero-text-letter-animated',
         translateY: [100,0],
-        // opacity: [0,1],
+        opacity: [0,1],
         easing: "easeOutExpo",
         duration: 1400,
-        delay: (el, i) => 30 * i
+        delay: ((el, i) => 1300 + (30 * i))
     })
 }
 
@@ -235,10 +247,16 @@ function animateHeroImage(){
     anime.timeline({loop: false})
     .add({
         targets: '.hero-image',
-        translateY: [100,0],
-        opacity: [0,1],
+        // translateY: [100,0],
+        // opacity: [0,1],
+        scale: [0,1],
         easing: "easeOutExpo",
         duration: 1400,
     })
 }
 
+function scrollToFooter() {
+    
+    LocoScroll.scrollTo('.lets-work-together-section');
+    
+}

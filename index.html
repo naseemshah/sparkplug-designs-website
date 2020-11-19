@@ -9,11 +9,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sparkplug Designs</title>
+    <title>Sparkplug Designs - Design, Branding & UI/UX Agency, Mumbai</title>  
+    <meta name="description" content= "Sparkplug Designs is a full-stack design agency from Mumbai, India helping clients worldwide with Branding, UI/UX, mobile and web development, eCommerce solutio" />
+    <meta name="robots" content= "index, follow">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/flickity.min.css">
     <link rel="stylesheet" href="./assets/css/locomotive.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171609779-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-171609779-1');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WCRJMW9');</script>
+        
+
+    
 </head>
 <body>
     
@@ -24,9 +43,9 @@
             </div>
             <div class="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-elements">Works</li>
-                    <li class="nav-elements">About</li>
-                    <li class="nav-elements cta">Hire us<s/li>
+                    <li class="nav-elements"><a href="https://www.behance.net/SparkplugDesigns" target="_blank">Works</a></li>
+                    <li class="nav-elements hide">About</li>
+                    <li class="nav-elements cta" onclick="scrollToFooter()">Hire us<s/li>
                 </ul>
             </div>
             <div id="ham-menu" class="ham-menu">
@@ -42,9 +61,9 @@
         <div class="sidebar-nav-container">
             <ul class="nav-list">
                 <li class="sidebar-nav-elements">Works</li>
-                <li class="sidebar-nav-elements">About</li>
-                <li class="sidebar-nav-elements">Services</li>
-                <li class="sidebar-nav-elementsnav-elements cta">Hire us<s/li>
+                <li class="sidebar-nav-elements hide">About</li>
+                <li class="sidebar-nav-elements hide">Services</li>
+                <li id="ham-hire-us" class="sidebar-nav-elements cta">Hire us<s/li>
             </ul>
         </div>
         <div class="sidebar-social-icons">
@@ -96,16 +115,16 @@
                 <div class="masonry-wrapper">
                     <div id="masonry" class="masonry">
                         <div data-scroll data-scroll-speed="1" class="masonry-item">
-                            <img src="./assets/img/works/work1.png" alt="${WorkItem.title}" class="masonry-content">
-                        </div>
-                        <div data-scroll data-scroll-speed="5" class="masonry-item">
-                            <img src="./assets/img/works/work2.png" alt="${WorkItem.title}" class="masonry-content">
+                            <img src="./assets/img/works/work1.png" alt="" class="masonry-content">
                         </div>
                         <div data-scroll data-scroll-speed="6" class="masonry-item">
-                            <img src="./assets/img/works/work3.png" alt="${WorkItem.title}" class="masonry-content">
+                            <img src="./assets/img/works/work2.png" alt="" class="masonry-content">
                         </div>
-                        <div data-scroll data-scroll-speed="2" class="masonry-item">
-                            <img src="./assets/img/works/work4.png" alt="${WorkItem.title}" class="masonry-content">
+                        <div data-scroll data-scroll-speed="5" class="masonry-item">
+                            <img src="./assets/img/works/work3.png" alt="" class="masonry-content">
+                        </div>
+                        <div data-scroll data-scroll-speed="4" class="masonry-item">
+                            <img src="./assets/img/works/work4.png" alt="" class="masonry-content">
                         </div>
                         
                      </div>
@@ -210,7 +229,9 @@
                 </div>                
             </section>
             <section class="lets-work-together-section"> 
-                <h1>Lets work together</h1>
+                <h1 class="lets-work-together-desktop">Let's work together</h1>
+                <h1 class="lets-work-together-mobile">Let's<br>work together</h1>
+
             </section>
         </div>
     
@@ -254,36 +275,49 @@
                     </address>
                 </div>
                 <div class="footer-top-inner-right">
-                    <form action="">
+                    <form id="footer-form" action="#" methode="post" onsubmit="return sendFooterForm()">
                         <div>
                             <label for="first-name">Name</label>
-                            <input type="text" name="first-name" id="form-first-name" required>
+                            <input type="text" name="firstname" id="form-first-name" required>
                         </div>
                         <div>
                             <label for="first-name">Last Name</label>
-                            <input type="text" name="last-name" id="form-last-name" required>
+                            <input type="text" name="lastname" id="form-last-name" required>
                         </div>
                         <div>
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="form-email" required>
+                            <input type="email" name="fromemail" id="form-email" required>
                         </div>
                         <div>
                             <label for="phone">Phone</label>
-                            <input type="tel" name="phone" id="form-phone" required> 
+                            <input type="number" name="phone" id="form-phone" required> 
                         </div>
                         <div>
                             <label class="about-project-label" for="about-project">About your project</label>
-                            <textarea name="about-project" id="form-about-project" required></textarea>
+                            <textarea name="aboutproject" id="form-about-project" required></textarea>
                         </div>
                         <div class="form-submit-section">
                             <p>Incase of NDA, you can sign NDA on the reply email</p>
                             <button class="form-submit-button" type="submit">
-                                <p>Send</p>
-                                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="21" cy="21" r="20.6719" stroke="white" stroke-width="0.65625"/>
-                                    <path d="M21.3281 31.1719L31.1719 21.3281L21.3281 11.4844" stroke="white" stroke-width="0.65625"/>
-                                    <line x1="30.8572" y1="21.3281" x2="11.1429" y2="21.3281" stroke="white" stroke-width="0.65625"/>
-                                </svg>
+                                <p id="form-submit-button-send" class="show-form-button-message">Send
+                                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="21" cy="21" r="20.6719" stroke="white" stroke-width="0.65625"/>
+                                        <path d="M21.3281 31.1719L31.1719 21.3281L21.3281 11.4844" stroke="white" stroke-width="0.65625"/>
+                                        <line x1="30.8572" y1="21.3281" x2="11.1429" y2="21.3281" stroke="white" stroke-width="0.65625"/>
+                                    </svg>
+                                </p>
+                                <p id="form-submit-button-sending">Sending
+                                    <svg style="margin: auto; background: none; shape-rendering: auto;" width="44px" height="44px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                                        <circle cx="50" cy="50" fill="none" stroke="#fdfdfd" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+                                          <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+                                        </circle>
+                                        <!-- [ldio] generated by https://loading.io/ --></svg>
+                                </p>
+                                <p id="form-submit-button-sent">Sent</p>
+                                <p id="form-submit-button-error">Error!</p>
+
+                                
+                                
                             </button>
                         </div>
                     </form>
@@ -309,10 +343,16 @@
     <!-- scripts -->
     <script src="./assets/js/anime.min.js" ></script>
     <script src="./assets/js/flickity.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="./assets/js/script.js" ></script>
     <script src="./assets/js/home.js" ></script>
     <script src="./assets/js/locomotive.js" ></script>
-    
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCRJMW9"
+        height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+        
 
 </body>
 </html>

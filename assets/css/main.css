@@ -1,3 +1,4 @@
+
 @import url("../fonts/fonts.css");
 html,body{
     margin: 0;
@@ -12,6 +13,7 @@ s{
     text-decoration: none;
 }
 
+
 .container{
     width: 95%;
     margin-left: auto;
@@ -22,7 +24,7 @@ s{
 .nav-logo{
     display: flex;
     align-items: center;
-    width: 112px;
+    width: 130px;
 }
 
 .nav-logo img{
@@ -57,6 +59,16 @@ nav{
     font-size: 18px;
     line-height: 30px;
     cursor: pointer;
+}
+
+.nav-menu ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu ul li a:visited{
+    text-decoration: none;
+    color: black;
 }
 
 nav .cta{
@@ -116,6 +128,7 @@ nav .cta:hover{
 .hero-text-letter-animated{
     display: inline-block;
     line-height: 1em;
+    margin-left: 5px;
   }
 .hero-image{
     width: 500px;
@@ -171,6 +184,7 @@ nav .cta:hover{
     width: 100%;
     height: 100%;
 }
+
 
 
 .sidebar{
@@ -232,8 +246,9 @@ nav .cta:hover{
     cursor: pointer;
 }
 
-
-
+#ham-hire-us{
+    border-bottom: none;
+}
 /* ////////////\\\\\\\\\\\\\\\\ */
 /*      Masonery grid            */
 .works-title{
@@ -596,7 +611,11 @@ nav .cta:hover{
 
 /* /////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 /* lets-work-together-section */
-
+.lets-work-together-mobile{
+    display: none;
+    line-height: 18vw!important;
+    font-size: 14vw!important;
+}
 .lets-work-together-section{
     /* background-color: tomato; */
     width: 100%;
@@ -627,8 +646,29 @@ footer{
     padding: 0 5vw;
     /* background-color: aqua; */
     box-sizing: border-box;
+    outline: none;
+}
+#form-submit-button-send{
+    display: none;
+
+}
+#form-submit-button-sending{
+    display: none;
+
+}
+#form-submit-button-sent{
+    display: none;
+
+}
+#form-submit-button-error{
+    display: none;
 }
 
+.show-form-button-message{
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+}
 
 .footer-icons{
     color: rgb(0, 0, 0);
@@ -701,12 +741,16 @@ footer form{
     grid-row-gap: 0px;
     /* background-color: aquamarine; */
     box-sizing: border-box;
+    outline: none;
+
 }
 footer form label{
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
     line-height: 28px;
+    outline: none;
+
 }
 footer form input{
     border: none;
@@ -714,6 +758,8 @@ footer form input{
     max-width: 100%;
     border-bottom: solid 1px black;
     font-size: 30px;
+    outline: none;
+
 }
 footer form div{
     display: flex;
@@ -721,6 +767,8 @@ footer form div{
     height: fit-content;
     margin: 10px;
     box-sizing: border-box;
+    outline: none;
+
     /* background-color: #682d54; */
 
 }
@@ -773,6 +821,8 @@ footer form div:nth-child(6){
     margin-top: 20px;
     font-size: 20px;
     padding: 20px;
+    outline: none;
+
 }
 .form-submit-section{
     display: flex;
@@ -797,6 +847,8 @@ footer form div:nth-child(6){
 		#7559ff 72%,
 		#101ee7 100%
     );
+    outline: none;
+
     transition: all 0.5s ease-in-out;
 
     background-size: 600%;
@@ -809,6 +861,7 @@ footer form div:nth-child(6){
     text-align: center;
     margin-left: 30px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .form-submit-button:hover{
@@ -827,6 +880,13 @@ footer form div:nth-child(6){
     font-size: 22px;
     line-height: 28px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-submit-button p svg{
+    margin-left: 15px;
 }
 
 .footer-bottom{
@@ -1077,6 +1137,12 @@ footer form div:nth-child(6){
     #what-we-do-hover-container{
         display: none;
     }
+    .lets-work-together-mobile{
+        display: unset;
+    }
+    .lets-work-together-desktop{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -1093,6 +1159,13 @@ footer form div:nth-child(6){
         padding: 20px;
         max-width: 80%;
         margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .hero-text-letter-animated{
+        font-size: 30px;
+        margin-left: 5px;
+        line-height: 30px;
     }
     .hero-image{
         width: 350px;
@@ -1185,4 +1258,11 @@ footer form div:nth-child(6){
         
 
 }
+
+
+/* Temp */
+.hide{
+    display: none!important;
+}
+/*  */
 
