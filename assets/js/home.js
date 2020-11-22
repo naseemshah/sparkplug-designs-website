@@ -8,6 +8,7 @@ window.onload = (e) =>{
         opacity: [1,0],
         // scale: [0,1],
         easing: "easeOutExpo",
+        delay: 1000,
         duration: 1000,
     })
     generateMasaneryGrid();
@@ -247,7 +248,7 @@ function animateHeroText(){
         opacity: [0,1],
         easing: "easeOutExpo",
         duration: 1400,
-        delay: ((el, i) => 1300 + (30 * i))
+        delay: ((el, i) => 2300 + (30 * i))
     })
 }
 
@@ -259,6 +260,7 @@ function animateHeroImage(){
         // opacity: [0,1],
         scale: [0,1],
         easing: "easeOutExpo",
+        delay: 1000,
         duration: 1400,
     })
 }
