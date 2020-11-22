@@ -34,8 +34,13 @@
 
     
 </head>
-<body>
-    
+<bod>
+    <div class="loader">
+        <img src="./assets/img/logo.svg" alt="Sparkplug Designs">
+        <div class="progress-bar-container">
+            <div class="progress-bar"  id="progress-bar"></div>
+        </div>
+    </div>
     <header>
         <nav>
             <div class="nav-logo">
@@ -341,6 +346,42 @@
 
 
     <!-- scripts -->
+    <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+    <script>
+        var queue = new createjs.LoadQueue(false);
+        queue.on("fileload", handleFileLoadComplete);
+        queue.on('progress',event=>{
+            let progress = Math.floor( event.progress * 100);
+            let progressBar = document.getElementById("progress-bar")
+            progressBar.style.width = `${progress}%`;
+
+            // console.log(progress);
+            // console.log(progressBar.style.width);
+        })
+        let LoadFilePaths = [
+            './assets/img/logo.svg',
+            './assets/js/anime.min.js',
+            "./assets/js/flickity.min.js",
+            "https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js",
+            "./assets/js/script.js",
+            "./assets/js/home.js",
+            "./assets/js/locomotive.js",
+            './assets/img/works/work1.png',
+            './assets/img/works/work2.png',
+            './assets/img/works/work3.png',
+            './assets/img/works/work4.png',
+            './assets/img/hero-image.jpg'
+        ];
+
+        LoadFilePaths.map((FilePath)=>{
+            queue.loadFile(FilePath);
+        })
+
+        function handleFileLoadComplete() {
+            // console.log("complete")
+        }
+        
+    </script>
     <script src="./assets/js/anime.min.js" ></script>
     <script src="./assets/js/flickity.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
@@ -352,6 +393,7 @@
         height="0" width="0" style="display:none;visibility:hidden">
         </iframe>
     </noscript>
+    
         
 
 </body>

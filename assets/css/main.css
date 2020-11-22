@@ -8,6 +8,33 @@ html,body{
     font-family: 'Euclid Circular A', Arial, Helvetica, sans-serif;
 }
 
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.progress-bar-container{
+    width: 30vw;
+}
+
+.progress-bar{
+    margin-top: 20px;
+    width: 0%;
+    height: 8px;
+    border-radius: 20px;
+    transition: width 0.5s ease-in-out;
+    background: linear-gradient(90deg, #14FFE9 0%, #1AF9E9 3%, #2AE7E8 8%, #44CBE7 13%, #69A3E6 19%, #986FE4 25%, #D132E2 32%, #FF00E0 36%, #FFEB3B 91%);
+}
 
 s{
     text-decoration: none;

@@ -1,7 +1,15 @@
 let LocoScroll;
 window.onload = (e) =>{
     // console.log(e);
-    
+    anime.timeline({loop: false})
+    .add({
+        targets: '.loader',
+        // translateY: [100,0],
+        opacity: [1,0],
+        // scale: [0,1],
+        easing: "easeOutExpo",
+        duration: 1000,
+    })
     generateMasaneryGrid();
     generateHomeCarousal();
     setAccordian();
