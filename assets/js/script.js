@@ -42,11 +42,13 @@ hamMenuHireBtn.onclick = ()=>{
     LocoScroll.scrollTo('.footer-address');
 }
 
-(function() {
-    emailjs.init("user_kSG71wGhQRVFxYJ84MP7U");
-})();
+// (function() {
+//     emailjs.init("user_kSG71wGhQRVFxYJ84MP7U");
+// })();
 
 function sendFooterForm() {
+    emailjs.init("user_kSG71wGhQRVFxYJ84MP7U");
+
     let send = document.getElementById("form-submit-button-send");
     let sending = document.getElementById("form-submit-button-sending");
     let sent = document.getElementById("form-submit-button-sent");
@@ -87,9 +89,9 @@ function sendFooterForm() {
                 if(sent.classList.contains('show-form-button-message')){
                     sent.classList.remove('show-form-button-message');
                 }
-            error.classList.add("show-form-button-message");
+            // error.classList.add("show-form-button-message");
 
-        //    console.log('FAILED...', error);
+           console.log('FAILED...', error);
         });
     return false;
 }
