@@ -12,7 +12,7 @@ window.onload = (e) =>{
         duration: 1000,
     })
     generateMasaneryGrid();
-    // generateHomeCarousal();
+    generateHomeCarousal();
     setAccordian();
     generateClients();
     (function () {
@@ -24,31 +24,31 @@ window.onload = (e) =>{
     })();
     animateHeroImage();
     animateHeroText();
-    new Swiper('.swiper-container', {
-        loop: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        slidesPerView: 3,
-        paginationClickable: true,
-        spaceBetween: 20,
-        centeredSlides: true,
-        // autoHeight: true,
-        // updateOnWindowResize: true,
-        // width: 10
-        breakpoints: {  
+    // new Swiper('.swiper-container', {
+    //     loop: true,
+    //     nextButton: '.swiper-button-next',
+    //     prevButton: '.swiper-button-prev',
+    //     slidesPerView: 3,
+    //     paginationClickable: true,
+    //     spaceBetween: 20,
+    //     centeredSlides: true,
+    //     // autoHeight: true,
+    //     // updateOnWindowResize: true,
+    //     // width: 10
+    //     breakpoints: {  
    
-            // when window width is <= 320px
-            550: {       
-                slidesPerView: 3,
-                spaceBetween: 10     
-             },       
-            200: {       
-               slidesPerView: 1,
-               spaceBetween: 10     
-            },     
+    //         // when window width is <= 320px
+    //         550: {       
+    //             slidesPerView: 3,
+    //             spaceBetween: 10     
+    //          },       
+    //         200: {       
+    //            slidesPerView: 1,
+    //            spaceBetween: 10     
+    //         },     
             
-         } 
-    });
+    //      } 
+    // });
     
 }
 
