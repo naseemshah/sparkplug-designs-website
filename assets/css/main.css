@@ -8,6 +8,9 @@ html,body{
     font-family: 'Euclid Circular A', Arial, Helvetica, sans-serif;
 }
 
+.g-recaptcha{
+    transform: translateY(-10px);
+    }
 .loader{
     position: fixed;
     top: 0;
@@ -927,9 +930,6 @@ footer form div:nth-child(7){
     
 }
 
-.g-recaptcha{
-    transform: translateY(-25px);
-}
 
 .form-submit-button{
     display: flex;
@@ -1124,6 +1124,7 @@ footer form div:nth-child(7){
     transform: translateX(-50%);
     
    }
+   
 }
 
 
@@ -1143,6 +1144,10 @@ footer form div:nth-child(7){
     footer form div:nth-child(4) { grid-area: 4 / 1 / 5 / 2; height: 70px}
     footer form div:nth-child(5) { grid-area: 5 / 1 / 6 / 2; height: 300px;}
     footer form div:nth-child(6) { grid-area: 6 / 1 / 7 / 2;}
+    .g-recaptcha{
+    transform: translateY(-25px);
+    }
+
 }
 
 @media screen and (max-width: 900px){
