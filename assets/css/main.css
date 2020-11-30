@@ -250,7 +250,9 @@ nav .cta:hover{
 .sidebar-head img{
     cursor: pointer;
 }
-
+.sidebar-logo{
+    width: 150px;
+}
 .sidebar-nav-container{
     display: flex;
     flex-direction: column;
