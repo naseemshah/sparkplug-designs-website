@@ -606,6 +606,13 @@ nav .cta:hover{
     margin-bottom: 100px;
 }
 
+.clients-section h1{
+    /* background-color: aquamarine; */
+    font-weight: 600;
+    font-size: 43px;
+    line-height: 58px;
+    margin-left: 100px;
+}
 .home-clients-container {
     width: 100%;
     overflow: hidden;
