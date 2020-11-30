@@ -28,10 +28,26 @@ window.onload = (e) =>{
         loop: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        slidesPerView: 2,
+        slidesPerView: 3,
         paginationClickable: true,
         spaceBetween: 20,
-        centeredSlides: true
+        centeredSlides: true,
+        // autoHeight: true,
+        // updateOnWindowResize: true,
+        // width: 10
+        breakpoints: {  
+   
+            // when window width is <= 320px
+            550: {       
+                slidesPerView: 3,
+                spaceBetween: 10     
+             },       
+            200: {       
+               slidesPerView: 1,
+               spaceBetween: 10     
+            },     
+            
+         } 
     });
     
 }

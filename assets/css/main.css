@@ -463,9 +463,15 @@ nav .cta:hover{
     align-items: center;
     transition: all 0.5s ease-in-out;
     max-height: 80%!important;
+    width: 10%;
+    /* width: 5vw!important; */
+
 }
 .swiper-slide-active{
     max-height: 100%!important;
+    width: 280px!important;
+    /* width: 70vw!important; */
+
     background-color: yellow!important;
     transition: all 0.5s ease-in-out    ;
     }
@@ -909,15 +915,18 @@ footer form div:nth-child(7){
 .form-submit-section{
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
     line-height: 15px;
-    flex-direction: column!important;
-    /* background-color: #23302f; */
+    /* flex-direction: column!important; */
+    /* background-color: #23302f; */  
     
-    
+}
+
+.g-recaptcha{
+    transform: translateY(-25px);
 }
 
 .form-submit-button{
@@ -940,13 +949,14 @@ footer form div:nth-child(7){
     border-radius: 31px;
     border: none;
     width: 200px;
-    height: 58px;
+    height: 58px!important;
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    margin-left: 30px;
+    /* margin-left: auto; */
     cursor: pointer;
     overflow: hidden;
+
 }
 
 .form-submit-button:hover{
@@ -961,6 +971,9 @@ footer form div:nth-child(7){
     justify-items: end!important;
     align-items: center;
     margin-top: 20px;
+    flex-direction: column!important;
+    height: 100px!important;
+
 
 }
 /* .form-submit-button svg{
@@ -1131,6 +1144,9 @@ footer form div:nth-child(7){
 }
 
 @media screen and (max-width: 900px){
+    .g-recaptcha{
+        transform: translateY(-25px);
+    }
     .hero-text h1{
         font-size: 28px;
     }
@@ -1315,6 +1331,14 @@ footer form div:nth-child(7){
     .what-we-do-see-more h3{
         font-size: 28px;
     }
+    .form-submit-section{
+        flex-direction: column!important;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-submit-button{
+        margin: 20px 0 0 0;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -1344,16 +1368,20 @@ footer form div:nth-child(7){
         justify-content: center!important;
         align-items: center!important;
         width: 100%;
+        flex-direction: column!important;
     }
-    .g-catchpa-container{
+    .swiper-slide-active{
+        width: 100%!important;
+    }
+    /* .g-catchpa-container{
         justify-content: center!important;
         background-color: #0e76a8;
-    }
-    .g-recaptcha{
+    } */
+    /* .g-recaptcha{
         position: relative;
         left: 30px;
         transform:translateY(-20px);
-    }
+    } */
 }
 
 @media screen and (max-width: 481px) {
@@ -1381,14 +1409,7 @@ footer form div:nth-child(7){
         font-size: 6vw;
         line-height:  6vw;
     }
-    .form-submit-section{
-        flex-direction: column!important;
-        justify-content: center;
-        align-items: center;
-    }
-    .form-submit-button{
-        margin: 20px 0 0 0;
-    }
+    
     
 }
 
