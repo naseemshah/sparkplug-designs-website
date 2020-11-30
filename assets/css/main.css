@@ -1099,7 +1099,10 @@ footer form div:nth-child(7){
     transition: all 0.3s ease-in-out;    
 }
 
-
+#form-submit-button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 
 
 

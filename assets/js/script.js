@@ -95,3 +95,7 @@ function sendFooterForm() {
         });
     return false;
 }
+
+function recaptchaCallback() {
+    document.getElementById("form-submit-button").disabled = false;
+}
