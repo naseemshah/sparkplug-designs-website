@@ -12,7 +12,7 @@ window.onload = (e) =>{
         duration: 1000,
     })
     generateMasaneryGrid();
-    generateHomeCarousal();
+    // generateHomeCarousal();
     setAccordian();
     generateClients();
     (function () {
@@ -24,6 +24,15 @@ window.onload = (e) =>{
     })();
     animateHeroImage();
     animateHeroText();
+    new Swiper('.swiper-container', {
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 2,
+        paginationClickable: true,
+        spaceBetween: 20,
+        centeredSlides: true
+    });
     
 }
 

@@ -52,7 +52,7 @@ function sendFooterForm() {
     let send = document.getElementById("form-submit-button-send");
     let sending = document.getElementById("form-submit-button-sending");
     let sent = document.getElementById("form-submit-button-sent");
-    let error = document.getElementById("form-submit-button-error");
+    let errorMsg = document.getElementById("form-submit-button-error");
 
     if(send.classList.contains('show-form-button-message')){
         send.classList.remove('show-form-button-message');
@@ -60,8 +60,8 @@ function sendFooterForm() {
     if(sent.classList.contains('show-form-button-message')){
         sent.classList.remove('show-form-button-message');
     }
-    if(error.classList.contains('show-form-button-message')){
-        error.classList.remove('show-form-button-message');
+    if(errorMsg.classList.contains('show-form-button-message')){
+        errorMsg.classList.remove('show-form-button-message');
     }
     sending.classList.add("show-form-button-message")
 
@@ -74,8 +74,8 @@ function sendFooterForm() {
             if(sending.classList.contains('show-form-button-message')){
                 sending.classList.remove('show-form-button-message');
             }
-            if(error.classList.contains('show-form-button-message')){
-                error.classList.remove('show-form-button-message');
+            if(errorMsg.classList.contains('show-form-button-message')){
+                errorMsg.classList.remove('show-form-button-message');
             }
             sent.classList.add("show-form-button-message");
 
@@ -89,7 +89,7 @@ function sendFooterForm() {
                 if(sent.classList.contains('show-form-button-message')){
                     sent.classList.remove('show-form-button-message');
                 }
-            // error.classList.add("show-form-button-message");
+                errorMsg.classList.add("show-form-button-message");
 
            console.log('FAILED...', error);
         });
