@@ -389,6 +389,7 @@ nav .cta:hover{
     bottom: 38px;
     left: 36px;
     color: white;
+    pointer-events: none;
 }
 .about-masonery-item-container h3{
     font-style: normal;
@@ -399,6 +400,8 @@ nav .cta:hover{
     padding: 0;
     margin-bottom: 9px;
     opacity: 0;
+    pointer-events: none;
+
 }
 .about-masonery-item-container p{
     font-family: Euclid Circular A;
@@ -409,6 +412,8 @@ nav .cta:hover{
     margin: 0;
     padding: 0;
     opacity: 0;
+    pointer-events: none;
+    
 }
 /* slider overrides */
 
@@ -1046,7 +1051,7 @@ footer form div:nth-child(7){
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .follow-text{
