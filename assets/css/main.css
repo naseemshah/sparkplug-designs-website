@@ -11,6 +11,7 @@ html,body{
 .g-recaptcha{
     transform: translateY(-10px);
     }
+
 .loader{
     position: fixed;
     top: 0;
@@ -341,6 +342,8 @@ nav .cta:hover{
       margin-top: 50px;
       margin-bottom: 150px;
       width: 500px;
+    transform-style: preserve-3d;
+
     }
   .masonry-item:nth-child(2){
     /* background-color: red; */
@@ -350,6 +353,8 @@ nav .cta:hover{
     /* border: solid 5px rgb(51, 255, 0); */
     position: relative;
     top: 200px;
+    transform-style: preserve-3d;
+
 }
 .masonry-item:nth-child(3){
     /* background-color: blue; */
@@ -362,6 +367,8 @@ nav .cta:hover{
     height: 474px;
     /* border: solid 5px blue; */
     top: 200px;
+    transform-style: preserve-3d;
+
 
 }
 .masonry-item:nth-child(4){
@@ -374,7 +381,35 @@ nav .cta:hover{
         margin-bottom: 150px;
         width: 643px;
         height: 614px;  
+
       }
+
+.about-masonery-item-container{
+    position: absolute;
+    bottom: 38px;
+    left: 36px;
+    color: white;
+}
+.about-masonery-item-container h3{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 9px;
+    opacity: 0;
+}
+.about-masonery-item-container p{
+    font-family: Euclid Circular A;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
 /* slider overrides */
 
 .see-all-cta{
@@ -1008,6 +1043,10 @@ footer form div:nth-child(7){
 
 .footer-bottom{
     margin-top: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .follow-text{
@@ -1033,9 +1072,8 @@ footer form div:nth-child(7){
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-    margin-bottom: 40px;
-    margin-top: 0px;
     text-align: center;
+    margin: 0;
 }
 
 #facebook-icon{
@@ -1105,7 +1143,21 @@ footer form div:nth-child(7){
 }
 
 
+.powered-by{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+}
 
+.powered-by img{
+    width: 80px;
+    margin-left: 5px;
+
+}
 
 @media screen and (min-width: 1920px){
    .container{
@@ -1400,6 +1452,11 @@ footer form div:nth-child(7){
         left: 30px;
         transform:translateY(-20px);
     } */
+    .footer-bottom{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 481px) {

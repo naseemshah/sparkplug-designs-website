@@ -24,6 +24,66 @@ window.onload = (e) =>{
     })();
     animateHeroImage();
     animateHeroText();
+
+    let masoneryDivs = document.getElementsByClassName("masonry-item");
+    for (let i = 0; i < masoneryDivs.length; i++) {
+        masoneryDivs[i].addEventListener('mouseenter',()=>{
+            var textWrapper1 = masoneryDivs[i].children[1].children[0];
+            textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S+\s*/g, `<span id="about-masonery-item-${i}-letters" class='about-masonery-item-${i}-letters'>$&</span>`);
+            for (let j = 0; j < textWrapper1.length; j++) {
+                textWrapper1.children[j].style = "display: inline-block;"
+            }
+            
+            anime.timeline({loop: false})
+            .add({
+                targets: [textWrapper1,`.about-masonery-item-${i}-letters`],
+                translateY: [100,0],
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 700,
+                delay: ((el, i) => (30 * i))
+            })
+            var textWrapper2 = masoneryDivs[i].children[1].children[1];
+            textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S+\s*/g, `<span id="about-masonery-item-${i}-letters" class='about-masonery-item-${i}-letters'>$&</span>`);
+            for (let j = 0; j < textWrapper2.length; j++) {
+                textWrapper2.children[j].style = "display: inline-block;"
+            }
+            
+            anime.timeline({loop: false})
+            .add({
+                targets: [textWrapper2,`.about-masonery-item-${i}-letters`],
+                translateY: [100,0],
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 700,
+                delay: ((el, i) => 500+(30 * i))
+            })
+        },false)
+        masoneryDivs[i].addEventListener('mouseleave',()=>{
+            var textWrapper1 = masoneryDivs[i].children[1].children[0];
+                       
+            anime.timeline({loop: false})
+            .add({
+                targets: [textWrapper1,`.about-masonery-item-${i}-letters`],
+                translateY: [0,100],
+                opacity: [1,0],
+                easing: "easeOutExpo",
+                duration: 700,
+                delay: ((el, i) => 500+(30 * i))
+            })
+            var textWrapper2 = masoneryDivs[i].children[1].children[1];
+            anime.timeline({loop: false})
+            .add({
+                targets: [textWrapper2,`.about-masonery-item-${i}-letters`],
+                translateY: [0,100],
+                opacity: [1,0],
+                easing: "easeOutExpo",
+                duration: 700,
+                delay: ((el, i) => (30 * i))
+            })
+            
+        },false)
+    }
     // new Swiper('.swiper-container', {
     //     loop: true,
     //     nextButton: '.swiper-button-next',
@@ -58,19 +118,19 @@ window.onload = (e) =>{
 let workItems = [
     {
         workName: 'Work Name',
-        image: 'assets/img/works/work1.png'
+        image: 'assets/img/works/1cecs.jpg'
     },
     {
         workName: 'Work Name',
-        image: 'assets/img/works/work2.png'
+        image: 'assets/img/works/2supriya-100.jpg'
     },
     {
         workName: 'Work Name',
-        image: 'assets/img/works/work3.png'
+        image: 'assets/img/works/3as-100.jpg'
     },
     {
         workName: 'Work Name',
-        image: 'assets/img/works/work4.png'
+        image: 'assets/img/works/4drl-100.jpg'
     }
 
 ];
@@ -215,6 +275,10 @@ function generateClients() {
             src: 'assets/img/clients/dr-reddy-s-seeklogo.com.svg'
         },
         {
+            title: "Hansa",
+            src: 'assets/img/clients/hansa.svg'
+        },
+        {
             title: "alpas",
             src: 'assets/img/clients/alpas.svg'
         },
@@ -230,14 +294,6 @@ function generateClients() {
             title: "dr-reddy-s-seeklogo.com",
             src: 'assets/img/clients/dr-reddy-s-seeklogo.com.svg'
         },
-        {
-            title: "alpas",
-            src: 'assets/img/clients/alpas.svg'
-        },
-        {
-            title: "AOL",
-            src: 'assets/img/clients/aol.svg'
-        }
                
              
     ]
