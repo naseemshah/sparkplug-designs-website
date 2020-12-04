@@ -333,8 +333,8 @@ nav .cta:hover{
     display: inline-block;
     vertical-align: top;
     padding: 10px;
-    border: 3px solid red;
-    background-color: rgb(207, 131, 37);
+    /* border: 3px solid red;
+    background-color: rgb(207, 131, 37); */
   }
   .masonry-item img {
         width: 100%;
