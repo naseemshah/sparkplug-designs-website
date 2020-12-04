@@ -315,6 +315,8 @@ nav .cta:hover{
     margin-left: auto;
     /* background-color: #0066FF; */
     box-sizing: border-box;
+    /* background-color: #62d6fa; */
+    height: 1800px;
   }
   .masonry {
     columns: 2;
@@ -413,7 +415,7 @@ nav .cta:hover{
     padding: 0;
     opacity: 0;
     pointer-events: none;
-    
+
 }
 /* slider overrides */
 
