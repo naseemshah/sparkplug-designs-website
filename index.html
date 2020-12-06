@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/css/magic-mouse.css">
+    <!-- <link rel="stylesheet" href="https://res.cloudinary.com/veseylab/raw/upload/v1597754760/magicmouse/magic-mouse-1.0.css" /> -->
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -433,9 +435,10 @@
         height="0" width="0" style="display:none;visibility:hidden">
         </iframe>
     </noscript>
-    <script src="./assets/js/magic_mouse.js"></script>
+    <!-- <script src="./assets/js/magic_mouse.js"></script> -->
+    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1597754761/magicmouse/magic_mouse-1.0.js"></script>
     <script>
-        options = {
+        let MouseOptions = {
         "cursorOuter": "circle-basic",
         "hoverEffect": "pointer-blur",
         "hoverItemMove": false,
@@ -443,7 +446,9 @@
         "outerWidth": 41,
         "outerHeight": 41
         }; 
-        magicMouse(options);
+        window.addEventListener('mousemove',()=>{
+            magicMouse(MouseOptions);
+        },{once : true})
 
     </script>
     
