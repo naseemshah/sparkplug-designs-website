@@ -1,3 +1,5 @@
+
+
 function setAccordian(){
     var acc = document.getElementsByClassName("home-accordian");
     var i;
@@ -14,20 +16,27 @@ function setAccordian(){
         //     // console.log(accordian)
         //     // accordian.classList.toggle("home-accordian-active");
         // })
-        
-            var panel = this.parentElement.childNodes[3];
-            if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-            } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-            // console.log(this.classList.add('home-accordian-active'));
             
-            }
-         
+        var panel = this.parentElement.childNodes[3];
+        if (panel.style.maxHeight) {
+        // panel.style.maxHeight = null;
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        // panel.style.height = panel.scrollHeight + "px";
+        // console.log(this.classList.add('home-accordian-active'));
+        
+        }
+        // LocoScroll.destroy();
+        LocoScroll.update();
+        // LocoScroll.update();
+        // LocoScroll.reinitScrollBar();
         });
     
     
     }
+   
+    
     
 
 }
@@ -163,6 +172,15 @@ function putJobs(){
     })
     
     setAccordian()
+    
 }
-
-putJobs()
+let LocoScroll;
+window.onload = () =>{
+    putJobs()
+    LocoScroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        // multiplier: 0.5
+    });
+    LocoScroll.init()
+}

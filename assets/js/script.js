@@ -99,3 +99,17 @@ function sendFooterForm() {
 function recaptchaCallback() {
     document.getElementById("form-submit-button").disabled = false;
 }
+
+let MouseOptions = {
+    "cursorOuter": "circle-basic",
+    "hoverEffect": "pointer-blur",
+    "hoverItemMove": false,
+    "defaultCursor": false,
+    "outerWidth": 41,
+    "outerHeight": 41
+    }; 
+    window.addEventListener('mousemove',()=>{
+        magicMouse(MouseOptions);
+    },{once : true})
+
+    
