@@ -1,4 +1,4 @@
-
+let LocoScroll;
 
 function setAccordian(){
     var acc = document.getElementsByClassName("home-accordian");
@@ -28,8 +28,8 @@ function setAccordian(){
         
         }
         // LocoScroll.destroy();
+        // LocoScroll.init()
         LocoScroll.update();
-        // LocoScroll.update();
         // LocoScroll.reinitScrollBar();
         });
     
@@ -174,7 +174,7 @@ function putJobs(){
     setAccordian()
     
 }
-let LocoScroll;
+
 window.onload = () =>{
     putJobs()
     LocoScroll = new LocomotiveScroll({

@@ -150,14 +150,14 @@ nav .cta{
     justify-content: center;
 }
 .allprojects-intro h1{
-    font-style: normal;
-    font-weight: 300;
-    font-size: 45px;
-    line-height: 60px;
-    text-align: center;
     font-feature-settings: 'kern' off;
     color: #000000;
     width: 80%;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 52px;
+    text-align: center;
+    line-height: 70px;
 }
 
 .allworks-mobile{
@@ -171,7 +171,9 @@ nav .cta{
     margin-right: auto;
 }
 .allworks h1{
-    margin-bottom: 60px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 50px;
 }
 .allworks-row{
     display: flex;
